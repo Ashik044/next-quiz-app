@@ -26,9 +26,9 @@ function nav() {
           account_circle
         </span>
 
-        <a className="pl-2 mb-1 text-blue-600 font-bold">
-          <Link href="/Signup">Signup</Link>
-        </a>
+        <Link href="/Signup">
+          <a className="pl-2 mb-1 text-blue-600 font-bold">Signup</a>
+        </Link>
 
         {/* <span className="material-icons-outlined" title="Logout"> logout </span>  */}
       </div>
