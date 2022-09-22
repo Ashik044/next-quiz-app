@@ -1,6 +1,6 @@
-import { useRef, useState, useEffect } from "react";
-import ReactPlayer from "react-player/youtube";
+import { useRef, useState } from "react";
 import classes from "../../styles/MiniPlayer.module.css";
+import dynamic from "next/dynamic";
 
 export default function MiniPlayer() {
   const buttonRef = useRef();
@@ -8,6 +8,7 @@ export default function MiniPlayer() {
 
   const videoUrl = `https://www.youtube.com/watch?v=P55BWKo8Z8o`;
 
+  const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
   function toggleMiniPlayer() {
     if (!status) {
