@@ -1,5 +1,5 @@
 import Answer from "../components/quiz component/Answer";
-import MiniPlayer from "../components/quiz component/MiniPlayer";
+// import MiniPlayer from "../components/quiz component/MiniPlayer";
 import ProgessBar from "../components/quiz component/ProgressBar";
 
 import Nav from "../components/Nav";
@@ -8,6 +8,7 @@ const Quiz = () => {
   return (
     <>
       <Nav />
+      
       <div className="mx-10">
         <div className="text-center mb-4">
           <h1 className="text-4xl font-bold mt-4">
@@ -19,7 +20,7 @@ const Quiz = () => {
         </div>
 
         <Answer />
-        <MiniPlayer />
+        {/* <MiniPlayer /> */}
         <ProgessBar />
       </div>
     </>

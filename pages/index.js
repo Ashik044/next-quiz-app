@@ -1,16 +1,6 @@
 import Head from "next/head";
-
 import Layout from "../components/Layout";
-
-import Nav from "../components/Nav";
-
 import FrontPage from "./Home";
-// import Signup from "./Signup";
-// import Login from "./Login";
-// import Quiz from "./Quiz";
-// import Result from "./Result";
-
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -21,13 +11,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-     
       <Layout>
         <FrontPage />
-        {/* <Signup /> */}
-        {/* <Login /> */}
-        {/* <Quiz /> */}
-        {/* <Result /> */}
       </Layout>
     </>
   );

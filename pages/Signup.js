@@ -6,6 +6,7 @@ import TextInput from "../components/form component/TextInput";
 import image from "../public/signup.svg";
 
 import Nav from "../components/nav";
+import Link from "next/link";
 
 const Signup = () => {
   return (
@@ -54,7 +55,7 @@ const Signup = () => {
               <div className="flex justify-center items-center">
                 Already have an account?
                 <a href="login.html" className="mx-1 text-blue-600">
-                  Login
+                  <Link href="/Login">Login</Link>
                 </a>
                 instead.
               </div>

@@ -4,8 +4,9 @@ import TextInput from "../components/form component/TextInput";
 import Illustration from "../components/form component/Illustration";
 
 import image from "../public/login.svg";
-
 import Nav from "../components/Nav";
+
+import Link from "next/link";
 
 const Login = () => {
   return (
@@ -42,8 +43,8 @@ const Login = () => {
 
               <div className="flex justify-center items-center">
                 Don't have an account?
-                <a href="login.html" className="mx-1 text-blue-600">
-                  Signup
+                <a className="mx-1 text-blue-600">
+                  <Link href="/Signup">Signup</Link>
                 </a>
                 instead.
               </div>
