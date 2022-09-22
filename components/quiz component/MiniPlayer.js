@@ -21,7 +21,7 @@ export default function MiniPlayer() {
   }
   return (
     <div
-      className={`${classes.miniPlayer} ${classes.floatingBtn} mr-6 mb-2`}
+      className={`${classes.miniPlayer} ${classes.floatingBtn} mr-6 mb-2 dark:bg-slate-900 dark:text-white `}
       ref={buttonRef}
       onClick={toggleMiniPlayer}
     >

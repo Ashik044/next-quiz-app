@@ -6,7 +6,7 @@ const Summary = () => {
     <div className="mt-10 mx-auto grid grid-cols-1 md:grid-cols-2">
       <div className="w-full h-full flex justify-center items-center">
         <div className="text-center">
-          <p className="text-lg md:text-2xl font-bold">
+          <p className="text-lg md:text-2xl font-bold dark:text-white">
             Your score is <br />5 out of 10
           </p>
         </div>
