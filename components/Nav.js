@@ -36,7 +36,7 @@ function nav() {
   }, []);
 
   return (
-    <nav className="w-full flex justify-between items-cente pt-2 pb-2 px-10 shadow-md dark:bg-slate-700 dark:text-white">
+    <nav className="w-full flex justify-between items-cente pt-2 pb-2 px-10 shadow-md dark:bg-slate-900 dark:text-white">
       <div className="flex">
         <Link href="/">
           <a className="flex justify-between items-center ">

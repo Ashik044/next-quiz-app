@@ -6,7 +6,7 @@ import Link from "next/link";
 const Video = () => {
   return (
     <Link href="/Quiz">
-      <div className="max-w-sm p-2.5 rounded bg-slate-50 cursor-pointer pb-4 h-fit mx-auto shadow-md hover:scale-105 ease-out duration-300">
+      <div className="max-w-sm p-2.5 rounded bg-slate-50 cursor-pointer pb-4 h-fit mx-auto shadow-md hover:scale-105 ease-out duration-300 dark:bg-slate-900 dark:text-white">
         <Image src={image} alt="" className="" />
         <p className="">
           # 23 React Hooks Bangla - React useReducer hook Bangla

@@ -2,7 +2,7 @@ import Nav from "./Nav";
 
 const Layout = ({ children }) => {
   return (
-    <div className="">
+    <div className="dark:bg-slate-700 dark:text-white">
       <Nav />
 
       <main className="w-full py-12 px-0">
