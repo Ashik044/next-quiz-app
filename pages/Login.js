@@ -43,9 +43,9 @@ const Login = () => {
 
               <div className="flex justify-center items-center">
                 Don't have an account?
-                <a className="mx-1 text-blue-600">
-                  <Link href="/Signup">Signup</Link>
-                </a>
+                <Link href="/Signup">
+                  <a className="mx-1 text-blue-600">Signup</a>
+                </Link>
                 instead.
               </div>
             </Form>
