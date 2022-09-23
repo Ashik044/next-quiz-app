@@ -22,7 +22,6 @@ const Quiz = () => {
           </div>
 
           <Answer />
-          <Answer />
           <MiniPlayer />
           <ProgessBar />
         </div>
