@@ -17,7 +17,6 @@ export default function SignupForm() {
   const [loading, setLoading] = useState();
 
   const { signup } = useAuth();
-  // const { signup } = useContext(AuthContext);
 
   async function handleSubmit(e) {
     e.preventDefault();
