@@ -4,7 +4,7 @@ import Checkbox from "../form component/Checkbox";
 import Button from "../form component/Button";
 import TextInput from "../form component/TextInput";
 import Link from "next/link";
-import { useAuth } from "../../context/AuthContext";
+import { signup } from "../../context/AuthContext";
 
 export default function SignupForm(){
   const [username, setUsername] = useState("");
@@ -16,7 +16,7 @@ export default function SignupForm(){
   const [error, setError] = useState();
   const [loading, setLoading] = useState();
 
-  const { signup } = useAuth();
+  // const { signup } = useAuth();
 
   async function handleSubmit(e) {
     e.preventDefault();
