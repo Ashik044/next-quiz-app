@@ -4,7 +4,7 @@ import TextInput from "../components/form component/TextInput";
 import Illustration from "../components/form component/Illustration";
 
 import image from "../public/login.svg";
-import Nav from "../components/Nav";
+import Head from "next/head";
 
 import Link from "next/link";
 import Layout from "../components/Layout";
@@ -12,9 +12,11 @@ import Layout from "../components/Layout";
 const Login = () => {
   return (
     <>
-      <Layout>
-        {/* <Nav /> */}
+      <Head>
+        <title>Login Page</title>
+      </Head>
 
+      <Layout>
         <div className="mx-10">
           <div className="text-center">
             <h1 className="text-4xl font-bold">Login to your account</h1>

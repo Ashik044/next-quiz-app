@@ -6,10 +6,10 @@ import {
   updateProfile,
 } from "firebase/auth";
 
-import React, { useContext, useEffect, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 import { auth } from "../pages/firebase";
 
-const AuthContext = React.createContext();
+const AuthContext = createContext();
 
 // consumer
 export function useAuth() {
@@ -32,7 +32,6 @@ export function AuthProvider({ children }) {
 
   // signup function
   async function signup(email, password, username) {
-    console.log(auth);
     await createUserWithEmailAndPassword(auth, email, password);
 
     // update profile
@@ -56,7 +55,7 @@ export function AuthProvider({ children }) {
     return signOut(auth);
   }
 
-  const value = {
+  const valueAble = {
     currentUser,
     loading,
     signup,
@@ -65,7 +64,7 @@ export function AuthProvider({ children }) {
   };
 
   return (
-    <AuthContext.Provider value={value}>
+    <AuthContext.Provider value={valueAble}>
       {!loading && children}
     </AuthContext.Provider>
   );

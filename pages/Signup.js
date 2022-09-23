@@ -2,11 +2,17 @@ import Illustration from "../components/form component/Illustration";
 import SignupForm from "../components/form component/SignupForm";
 import image from "../public/signup.svg";
 
+import Head from "next/head";
+
 import Layout from "../components/Layout";
 
 const Signup = () => {
   return (
     <>
+    <Head>
+      <title>Signup Page</title>
+    </Head>
+
       <Layout>
         <div className="mx-10">
           <div className="text-center">

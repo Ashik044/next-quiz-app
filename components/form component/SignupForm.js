@@ -4,9 +4,9 @@ import Checkbox from "../form component/Checkbox";
 import Button from "../form component/Button";
 import TextInput from "../form component/TextInput";
 import Link from "next/link";
-import { signup } from "../../context/AuthContext";
+import { useAuth } from "../../context/AuthContext";
 
-export default function SignupForm(){
+export default function SignupForm() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,7 +16,8 @@ export default function SignupForm(){
   const [error, setError] = useState();
   const [loading, setLoading] = useState();
 
-  // const { signup } = useAuth();
+  const { signup } = useAuth();
+  // const { signup } = useContext(AuthContext);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -28,7 +29,7 @@ export default function SignupForm(){
     try {
       setError("");
       setLoading(true);
-      await signup(email, password, username);
+      signup(email, password, username);
     } catch (err) {
       console.log(err);
       setLoading(false);
@@ -97,6 +98,4 @@ export default function SignupForm(){
       </div>
     </Form>
   );
-};
-
-
+}
