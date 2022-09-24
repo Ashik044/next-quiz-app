@@ -1,9 +1,8 @@
 import Summary from "../components/result component/Summary";
 import Analysis from "../components/result component/Analysis";
-
 import Head from "next/head";
-
 import Layout from "../components/Layout";
+import { withProtected } from "../components/route";
 
 const Result = () => {
   return (
@@ -22,4 +21,4 @@ const Result = () => {
   );
 };
 
-export default Result;
+export default withProtected(Result);

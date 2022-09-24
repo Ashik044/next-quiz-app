@@ -3,6 +3,7 @@ import image from "../public/login.svg";
 import Head from "next/head";
 import Layout from "../components/Layout";
 import LoginForm from "../components/form component/LoginForm";
+import { withPublic } from "../components/route";
 
 const Login = () => {
   return (
@@ -32,4 +33,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default withPublic(Login);

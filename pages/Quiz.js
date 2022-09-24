@@ -5,6 +5,8 @@ import ProgessBar from "../components/quiz component/ProgressBar";
 import Layout from "../components/Layout";
 import Head from "next/head";
 
+import { withProtected } from "../components/route";
+
 const Quiz = () => {
   return (
     <>
@@ -32,4 +34,4 @@ const Quiz = () => {
   );
 };
 
-export default Quiz;
+export default withProtected(Quiz);

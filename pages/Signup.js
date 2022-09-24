@@ -1,9 +1,9 @@
 import Illustration from "../components/form component/Illustration";
 import SignupForm from "../components/form component/SignupForm";
 import image from "../public/signup.svg";
-
 import Head from "next/head";
 import Layout from "../components/Layout";
+import { withPublic } from "../components/route";
 
 const Signup = () => {
   return (
@@ -33,4 +33,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default withPublic(Signup);
