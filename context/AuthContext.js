@@ -7,7 +7,7 @@ import {
 } from "firebase/auth";
 
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { auth } from "../pages/firebase";
+import { auth } from "../firebase";
 
 const AuthContext = createContext();
 
@@ -55,7 +55,7 @@ export function AuthProvider({ children }) {
     return signOut(auth);
   }
 
-  const valueAble = {
+  const value = {
     currentUser,
     loading,
     signup,
@@ -64,7 +64,7 @@ export function AuthProvider({ children }) {
   };
 
   return (
-    <AuthContext.Provider value={valueAble}>
+    <AuthContext.Provider value={value}>
       {!loading && children}
     </AuthContext.Provider>
   );

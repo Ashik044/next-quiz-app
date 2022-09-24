@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Layout from "../components/Layout";
 import FrontPage from "./Home";
-import { AuthProvider } from "../context/AuthContext";
 
 export default function Home() {
   return (
@@ -12,11 +11,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <AuthProvider>
-        <Layout>
-          <FrontPage />
-        </Layout>
-      </AuthProvider>
+      <Layout>
+        <FrontPage />
+      </Layout>
     </>
   );
 }

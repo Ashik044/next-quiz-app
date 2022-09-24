@@ -1,55 +1,38 @@
-import React, { useState } from "react";
-import Form from "../form component/Form";
-import Checkbox from "../form component/Checkbox";
-import Button from "../form component/Button";
-import TextInput from "../form component/TextInput";
+import { useState } from "react";
 import Link from "next/link";
+import Button from "../form component/Button";
+import Form from "../form component/Form";
+import TextInput from "../form component/TextInput";
 import { useAuth } from "../../context/AuthContext";
 import { useRouter } from "next/router";
 
-export default function SignupForm() {
+function LoginForm() {
   const router = useRouter();
 
-  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [agree, setAgree] = useState("");
 
   const [error, setError] = useState();
   const [loading, setLoading] = useState();
 
-  const { signup } = useAuth();
+  const { login } = useAuth();
 
   async function handleSubmit(e) {
     e.preventDefault();
-    // do validation
-    if (password !== confirmPassword) {
-      return setError("Passwords don't match!");
-    }
 
     try {
-      setError("account created successfully");
+      setError("Login successfully");
       setLoading(true);
-      await signup(email, password, username);
+      await login(email, password);
       router.push("/");
     } catch (err) {
       setLoading(false);
-      setError("Failed to create an account!");
+      setError("Failed to login");
     }
   }
 
   return (
     <Form className="w-full" onSubmit={handleSubmit}>
-      <TextInput
-        type="text"
-        required
-        placeholder="Enter name"
-        icon="person"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-
       <TextInput
         type="text"
         required
@@ -68,23 +51,6 @@ export default function SignupForm() {
         onChange={(e) => setPassword(e.target.value)}
       />
 
-      <TextInput
-        type="password"
-        required
-        placeholder="Confirm password"
-        icon="lock_clock"
-        value={confirmPassword}
-        onChange={(e) => setConfirmPassword(e.target.value)}
-      />
-
-      <Checkbox
-        text="I agree to the Terms &amp; Conditions"
-        required
-        style={"ml-4"}
-        value={agree}
-        onChange={(e) => setAgree(e.target.value)}
-      />
-
       <Button disabled={loading} type="submit">
         <span>Submit Now</span>
       </Button>
@@ -98,12 +64,14 @@ export default function SignupForm() {
       </div>
 
       <div className="flex justify-center items-center">
-        Already have an account?
-        <Link href="/Login">
-          <a className="mx-1 text-blue-400">Login</a>
+        Don't have an account?
+        <Link href="/Signup">
+          <a className="mx-1 text-blue-400">Signup</a>
         </Link>
         instead.
       </div>
     </Form>
   );
 }
+
+export default LoginForm;

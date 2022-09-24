@@ -2,15 +2,17 @@ import Answer from "../components/quiz component/Answer";
 import MiniPlayer from "../components/quiz component/MiniPlayer";
 import ProgessBar from "../components/quiz component/ProgressBar";
 
-import Nav from "../components/Nav";
 import Layout from "../components/Layout";
+import Head from "next/head";
 
 const Quiz = () => {
   return (
     <>
-      <Layout>
-        {/* <Nav /> */}
+      <Head>
+        <title>Quiz Page</title>
+      </Head>
 
+      <Layout>
         <div className="mx-10 ">
           <div className="text-center mb-4">
             <h1 className="text-4xl font-bold mt-4">
