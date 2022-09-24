@@ -105,11 +105,11 @@ function nav() {
   );
 }
 
-function BtnToggler({ children, classes = "", onEvent }) {
+function BtnToggler({ children, onEvent }) {
   return (
     <div
       onClick={onEvent}
-      className={`grid place-items-center w-10 h-10 sm:w-12 sm:h-12 text-sm sm:text-base lg:text-lg rounded-full cursor-pointer text-gray-800 dark:text-gray-100 select-none ml-4 md:ml-8 ${classes}`}
+      className={`grid place-items-center w-10 h-10 sm:w-12 sm:h-12 text-sm sm:text-base lg:text-lg rounded-full cursor-pointer text-gray-800 dark:text-gray-100 select-none ml-4 md:ml-8 `}
     >
       {children}
     </div>
