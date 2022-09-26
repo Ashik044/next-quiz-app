@@ -66,7 +66,7 @@ function LoginForm() {
       <div className="flex justify-center items-center">
         Don't have an account?
         <Link href="/Signup">
-          <a className="mx-1 text-blue-400">Signup</a>
+          <a className="mx-1 text-blue-700 font-semibold dark:text-blue-400">Signup</a>
         </Link>
         instead.
       </div>

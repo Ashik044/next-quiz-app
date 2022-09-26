@@ -100,7 +100,7 @@ export default function SignupForm() {
       <div className="flex justify-center items-center">
         Already have an account?
         <Link href="/Login">
-          <a className="mx-1 text-blue-400">Login</a>
+          <a className="mx-1 text-blue-700 font-semibold dark:text-blue-400">Login</a>
         </Link>
         instead.
       </div>

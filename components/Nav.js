@@ -83,12 +83,12 @@ function nav() {
           </span>
 
           <Link href="/Signup">
-            <a className="px-3 mb-1 text-blue-600 font-bold dark:text-blue-400">
+            <a className="px-3 mb-1 text-blue-700 font-bold dark:text-blue-400">
               Signup &nbsp;|
             </a>
           </Link>
           <Link href="/Login">
-            <a className="pr-1 mb-1 text-blue-600 font-bold dark:text-blue-400">
+            <a className="pr-1 mb-1 text-blue-700 font-bold dark:text-blue-400">
               Login
             </a>
           </Link>
