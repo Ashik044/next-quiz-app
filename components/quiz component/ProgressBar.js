@@ -1,13 +1,14 @@
-import classes from "../../styles/ProgressBar.module.css"
+import classes from "../../styles/ProgressBar.module.css";
 // import Button from "../form component/Button";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
-import Link from "next/link"
+import Link from "next/link";
 
 const ProgressBar = () => {
   return (
     <div className={`${classes.progressBar} dark:bg-slate-900 dark:text-white`}>
-      <div className={`${classes.backButton}`}>
-        <span className="material-icons-outlined"> arrow_back </span>
+      <div className={`bg-green-400 hover:bg-slate-500 hover:text-white flex items-center justify-center ml-3 w-[45px] py-[15px] rounded cursor-pointer`}>
+        <FaArrowLeft/>
       </div>
 
       <div className={classes.rangeArea}>
@@ -16,11 +17,11 @@ const ProgressBar = () => {
           <div className={classes.progress} style={{ width: "20%" }}></div>
         </div>
       </div>
-      
+
       <Link href="/Result">
         <button className="bg-green-400 hover:bg-slate-500 hover:text-white flex items-center px-4 py-2 m-3 rounded">
-          <span>Next Question</span>
-          <span className="material-icons-outlined"> arrow_forward </span>
+          <span className="mr-2">Next Question</span>
+          <FaArrowRight/>
         </button>
       </Link>
     </div>

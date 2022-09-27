@@ -21,24 +21,16 @@
 }
 
 .close {
-  display: block;
   position: absolute;
   right: -8px;
   top: -10px;
   z-index: 10;
-  background-color: #1E293B;
-  /* border: 1px solid #e5e5e5; */
+  background-color: #ffffff;
   border-radius: 50%;
   width: 32px;
   height: 32px;
   line-height: 20px;
-  padding: 5px 0 0 3px;
-}
-
-.close:hover {
-  color: #666666;
   cursor: pointer;
-  outline: 0;
 }
 
 @keyframes miniplayerAnim {

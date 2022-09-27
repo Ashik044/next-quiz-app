@@ -1,12 +1,18 @@
 import { useRef, useState } from "react";
 import classes from "../../styles/MiniPlayer.module.css";
 import dynamic from "next/dynamic";
+import { useRouter } from "next/router";
+import { BsFillPlayCircleFill } from "react-icons/bs";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 
 export default function MiniPlayer() {
+  var router = useRouter();
+  var id = router.query["id"];
+
   const buttonRef = useRef();
   const [status, setStatus] = useState(false);
 
-  const videoUrl = `https://www.youtube.com/watch?v=P55BWKo8Z8o`;
+  const videoUrl = `https://www.youtube.com/watch?v=${id}`;
 
   const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
@@ -25,16 +31,13 @@ export default function MiniPlayer() {
       ref={buttonRef}
       onClick={toggleMiniPlayer}
     >
-      <span className={`material-icons-outlined ${classes.open}`}>
-        play_circle_filled
-      </span>
-      <span
-        className={`material-icons-outlined ${classes.close}`}
-        onClick={toggleMiniPlayer}
-      >
-        close
-      </span>
-
+      <BsFillPlayCircleFill className={classes.open} />
+      
+        <AiOutlineCloseCircle
+          className={`${classes.close} dark:bg-black bg-white`}
+          onClick={toggleMiniPlayer}
+        />
+     
       <ReactPlayer
         className={classes.player}
         url={videoUrl}
@@ -44,7 +47,7 @@ export default function MiniPlayer() {
         controls
       />
 
-      <p>Hello</p>
+      <p>Hi</p>
     </div>
   );
 }

@@ -1,13 +1,21 @@
 import Answer from "../components/quiz component/Answer";
 import MiniPlayer from "../components/quiz component/MiniPlayer";
 import ProgessBar from "../components/quiz component/ProgressBar";
-
+import useQuestions from "../hook/useQuestions";
 import Layout from "../components/Layout";
 import Head from "next/head";
+import { useState } from "react";
+import { useRouter } from "next/router";
 
 import { withProtected } from "../components/route";
 
 const Quiz = () => {
+  var router = useRouter();
+  var id = router.query["id"];
+
+  const { loading, error, questions } = useQuestions(id);
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+
   return (
     <>
       <Head>
@@ -25,7 +33,10 @@ const Quiz = () => {
             </h4>
           </div>
 
-          <Answer />
+          <div className="grid md:grid-cols-2 gap-3 ">
+            <Answer />
+          </div>
+
           <MiniPlayer />
           <ProgessBar />
         </div>
@@ -35,3 +46,4 @@ const Quiz = () => {
 };
 
 export default withProtected(Quiz);
+ 

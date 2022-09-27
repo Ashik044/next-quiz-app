@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import logo from "../public/logo-bg.png";
+import logo from "../public/quiz.png";
 import Link from "next/link";
 import { useAuth } from "../context/AuthContext";
+import { CgProfile } from "react-icons/cg";
+import { FiLogOut } from "react-icons/fi";
+import { ImSun } from "react-icons/im";
+import { MdOutlineDarkMode } from "react-icons/md";
+
 
 function nav() {
   const [isDark, setIsDark] = useState(true);
@@ -48,39 +53,31 @@ function nav() {
               width={40}
               height={40}
             />
-            <h3 className="ml-2 font-bold hidden sm:block">Learn with Sumit</h3>
+            <h3 className="ml-2 font-bold hidden sm:block">Quiz Hub</h3>
           </a>
         </Link>
       </div>
 
       {currentUser ? (
         <div className="flex items-center">
-          <span className="material-icons-outlined" title="Account">
-            account_circle
-          </span>
+         <CgProfile className="w-6 h-6"/>
           <span className="mx-3 font-bold text-blue-400">
             {currentUser.displayName}
           </span>
-          <span
-            className="material-icons-outlined cursor-pointer"
-            title="Logout"
-            onClick={logout}
-          >
-            logout
-          </span>
+
+          <FiLogOut className="w-6 h-6 cursor-pointer" onClick={logout}/>
+
           <BtnToggler onEvent={toggleTheme}>
             {isDark ? (
-              <span class="material-icons-outlined">dark_mode</span>
+              <MdOutlineDarkMode className="w-6 h-6 cursor-pointer"/>
             ) : (
-              <span class="material-icons-outlined">light_mode</span>
+              <ImSun className="w-6 h-6 cursor-pointer"/>
             )}
           </BtnToggler>
         </div>
       ) : (
         <div className="flex items-center">
-          <span className="material-icons-outlined" title="Account">
-            account_circle
-          </span>
+         <CgProfile/>
 
           <Link href="/Signup">
             <a className="px-3 mb-1 text-blue-700 font-bold dark:text-blue-400">
@@ -94,9 +91,9 @@ function nav() {
           </Link>
           <BtnToggler onEvent={toggleTheme}>
             {isDark ? (
-              <span class="material-icons-outlined">dark_mode</span>
+              <MdOutlineDarkMode className="w-6 h-6 cursor-pointer"/>
             ) : (
-              <span class="material-icons-outlined">light_mode</span>
+              <ImSun className="w-6 h-6 cursor-pointer"/>
             )}
           </BtnToggler>
         </div>
