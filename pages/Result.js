@@ -3,8 +3,11 @@ import Analysis from "../components/result component/Analysis";
 import Head from "next/head";
 import Layout from "../components/Layout";
 import { withProtected } from "../components/route";
+import { useRouter } from "next/router";
 
 const Result = () => {
+  const router = useRouter();
+
   return (
     <>
       <Head>

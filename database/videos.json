@@ -309,142 +309,70 @@
     "5Xy-t8k_M4A": {
       "questions": [
         {
-          "title": "How to declare JavaScript variables?",
+          "title": "What is the correct command to create a new React project?",
           "options": [
             {
-              "title": "with var"
+              "title": "npm create-react-app"
             },
             {
-              "title": "with let"
+              "title": "npm create-react-app myReactApp"
             },
             {
-              "title": "with const"
+              "title": "npx create-react-app myReactApp"
             },
             {
-              "title": "with variable"
-            },
-            {
-              "title": "with declare"
-            },
-            {
-              "title": "with new"
-            },
-            {
-              "title": "with number"
-            },
-            {
-              "title": "with string"
-            },
-            {
-              "title": "with boolean"
-            },
-            {
-              "title": "with nothing"
+              "title": "npx create-react-app"
             }
           ]
         },
         {
-          "title": "When was JavaScript invented?",
+          "title": "What command is used to start the React local development server?",
           "options": [
             {
-              "title": "September 1998"
+              "title": "npm build"
             },
             {
-              "title": "October 1999"
+              "title": "npm run"
             },
             {
-              "title": "September 1995"
+              "title": "npm run dev"
             },
             {
-              "title": "September 1993"
-            },
-            {
-              "title": "August 1990"
-            },
-            {
-              "title": "January 1995"
-            },
-            {
-              "title": "with number"
-            },
-            {
-              "title": "December 1995"
-            },
-            {
-              "title": "March 1996"
-            },
-            {
-              "title": "January 1970"
+              "title": "npm start"
             }
           ]
         },
         {
-          "title": "Who or which company created JavaScript?",
+          "title": "What is the default local host port that a React development server uses?",
           "options": [
             {
-              "title": "Jordan Walke"
+              "title": "1000"
             },
             {
-              "title": "Netscape"
+              "title": "2000"
             },
             {
-              "title": "Jack Ma"
+              "title": "4000"
             },
             {
-              "title": "Nayok Razzaq"
-            },
-            {
-              "title": "Takla Rubel"
-            },
-            {
-              "title": "Tarzan"
-            },
-            {
-              "title": "Brendan Eich"
-            },
-            {
-              "title": "Mark Zuckerburg"
-            },
-            {
-              "title": "Bill Gates"
-            },
-            {
-              "title": "Steve Jobs"
+              "title": "3000"
             }
           ]
         },
         {
-          "title": "What is the latest version of ECMAScript",
+          "title": "What is the children prop?",
           "options": [
             {
-              "title": "ES2020"
+              "title": "A property that lets you set an object as a property"
             },
             {
-              "title": "ES2021"
+              "title": "A property that adds child values to state"
             },
             {
-              "title": "ES6"
+              "title": "A property that lets you nest components in other components"
             },
             {
-              "title": "ES7"
-            },
-            {
-              "title": "ES8"
-            },
-            {
-              "title": "ES2022"
-            },
-            {
-              "title": "ES21"
-            },
-            {
-              "title": "ES3"
-            },
-            {
-              "title": "ES9"
-            },
-            {
-              "title": "ES2020"
+              "title": "A property that lets you pass data to child components"
             }
           ]
         }
@@ -1326,149 +1254,74 @@
     "5Xy-t8k_M4A": {
       "questions": [
         {
-          "title": "How to declare JavaScript variables?",
+          "title": "What is the correct command to create a new React project?",
           "options": [
             {
-              "title": "with var",
+              "title": "npm create-react-app"
+            },
+            {
+              "title": "npm create-react-app myReactApp"
+            },
+            {
+              "title": "npx create-react-app myReactApp"
+            },
+            {
+              "title": "npx create-react-app",
               "correct": true
-            },
-            {
-              "title": "with let",
-              "correct": true
-            },
-            {
-              "title": "with const",
-              "correct": true
-            },
-            {
-              "title": "with variable"
-            },
-            {
-              "title": "with declare"
-            },
-            {
-              "title": "with new"
-            },
-            {
-              "title": "with number"
-            },
-            {
-              "title": "with string"
-            },
-            {
-              "title": "with boolean"
-            },
-            {
-              "title": "with nothing"
             }
           ]
         },
         {
-          "title": "When was JavaScript invented?",
+          "title": "What command is used to start the React local development server?",
           "options": [
             {
-              "title": "September 1998"
+              "title": "npm build"
             },
             {
-              "title": "October 1999"
+              "title": "npm run"
             },
             {
-              "title": "September 1995",
+              "title": "npm run dev"
+            },
+            {
+              "title": "npm start",
               "correct": true
-            },
-            {
-              "title": "September 1993"
-            },
-            {
-              "title": "August 1990"
-            },
-            {
-              "title": "January 1995"
-            },
-            {
-              "title": "with number"
-            },
-            {
-              "title": "December 1995"
-            },
-            {
-              "title": "March 1996"
-            },
-            {
-              "title": "January 1970"
             }
           ]
         },
         {
-          "title": "Who or which company created JavaScript?",
+          "title": "What is the default local host port that a React development server uses?",
           "options": [
             {
-              "title": "Jordan Walke"
+              "title": "1000"
             },
             {
-              "title": "Netscape",
+              "title": "2000"
+            },
+            {
+              "title": "4000"
+            },
+            {
+              "title": "3000",
               "correct": true
-            },
-            {
-              "title": "Jack Ma"
-            },
-            {
-              "title": "Nayok Razzaq"
-            },
-            {
-              "title": "Takla Rubel"
-            },
-            {
-              "title": "Tarzan"
-            },
-            {
-              "title": "Brendan Eich",
-              "correct": true
-            },
-            {
-              "title": "Mark Zuckerburg"
-            },
-            {
-              "title": "Bill Gates"
-            },
-            {
-              "title": "Steve Jobs"
             }
           ]
         },
         {
-          "title": "What is the latest version of ECMAScript",
+          "title": "What is the children prop?",
           "options": [
             {
-              "title": "ES2020"
+              "title": "A property that lets you set an object as a property"
             },
             {
-              "title": "ES2021",
+              "title": "A property that adds child values to state"
+            },
+            {
+              "title": "A property that lets you nest components in other components"
+            },
+            {
+              "title": "A property that lets you pass data to child components",
               "correct": true
-            },
-            {
-              "title": "ES6"
-            },
-            {
-              "title": "ES7"
-            },
-            {
-              "title": "ES8"
-            },
-            {
-              "title": "ES2022"
-            },
-            {
-              "title": "ES21"
-            },
-            {
-              "title": "ES3"
-            },
-            {
-              "title": "ES9"
-            },
-            {
-              "title": "ES2020"
             }
           ]
         }
