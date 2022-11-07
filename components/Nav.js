@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import logoImage from "../public/268-avatar-man-lineal.webp";
 import logo from "../public/quiz.png";
 import Link from "next/link";
 import { useAuth } from "../context/AuthContext";
@@ -7,7 +8,6 @@ import { CgProfile } from "react-icons/cg";
 import { FiLogOut } from "react-icons/fi";
 import { ImSun } from "react-icons/im";
 import { MdOutlineDarkMode } from "react-icons/md";
-
 
 function nav() {
   const [isDark, setIsDark] = useState(true);
@@ -60,24 +60,31 @@ function nav() {
 
       {currentUser ? (
         <div className="flex items-center">
-         <CgProfile className="w-6 h-6"/>
+          {/* <CgProfile className="w-6 h-6" /> */}
+          <div className="w-12 dark:text-white">
+            <Image src={logoImage} alt="" />
+          </div>
+
           <span className="mx-3 font-bold text-blue-400">
             {currentUser.displayName}
           </span>
 
-          <FiLogOut className="w-6 h-6 cursor-pointer" onClick={logout}/>
+          <FiLogOut className="w-6 h-6 cursor-pointer" onClick={logout} />
 
           <BtnToggler onEvent={toggleTheme}>
             {isDark ? (
-              <MdOutlineDarkMode className="w-6 h-6 cursor-pointer"/>
+              <MdOutlineDarkMode className="w-6 h-6 cursor-pointer" />
             ) : (
-              <ImSun className="w-6 h-6 cursor-pointer"/>
+              <ImSun className="w-6 h-6 cursor-pointer" />
             )}
           </BtnToggler>
         </div>
       ) : (
         <div className="flex items-center">
-         <CgProfile/>
+          {/* <CgProfile /> */}
+          <div className="w-12 dark:text-white">
+            <Image src={logoImage} alt="" />
+          </div>
 
           <Link href="/Signup">
             <a className="px-3 mb-1 text-blue-700 font-bold dark:text-blue-400">
@@ -91,9 +98,9 @@ function nav() {
           </Link>
           <BtnToggler onEvent={toggleTheme}>
             {isDark ? (
-              <MdOutlineDarkMode className="w-6 h-6 cursor-pointer"/>
+              <MdOutlineDarkMode className="w-6 h-6 cursor-pointer" />
             ) : (
-              <ImSun className="w-6 h-6 cursor-pointer"/>
+              <ImSun className="w-6 h-6 cursor-pointer" />
             )}
           </BtnToggler>
         </div>

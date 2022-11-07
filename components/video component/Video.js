@@ -13,7 +13,7 @@ const Video = ({ title, id, noq, keyNumber }) => {
         <p className="">{title}</p>
         <div className="flex justify-between items-center mt-4">
           <p className=" font-medium">{noq} Questions</p>
-          <p className="font-medium">Total numbe: {noq * 5}</p>
+          <p className="font-medium">Total number: {noq * 5}</p>
         </div>
       </div>
     </Link>

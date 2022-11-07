@@ -20,6 +20,7 @@ export function useAuth() {
 export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
   const [currentUser, setCurrentUser] = useState("");
+  const [qna, setQna] = useState();
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -55,12 +56,18 @@ export function AuthProvider({ children }) {
     return signOut(auth);
   }
 
+  function getQna(qnaArray) {
+    setQna(qnaArray);
+  }
+
   const value = {
     currentUser,
+    qna,
     loading,
     signup,
     login,
     logout,
+    getQna
   };
 
   return (

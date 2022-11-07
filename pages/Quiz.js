@@ -40,7 +40,7 @@ const reducer = (state, action) => {
 const Quiz = () => {
   var router = useRouter();
   var id = router.query["id"];
-  const { currentUser } = useAuth();
+  const { currentUser, getQna } = useAuth();
 
   const { loading, error, questions } = useQuestions(id);
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -80,13 +80,12 @@ const Quiz = () => {
       [id]: qna,
     });
 
+    getQna(qna);
+
     router.push({
       pathname: `/Result`,
       query: {
         id,
-      },
-      state: {
-        qna,
       },
     });
   }
@@ -146,4 +145,3 @@ const Quiz = () => {
 };
 
 export default withProtected(Quiz);
-
